@@ -35,8 +35,8 @@ module.exports = async (req, res) => {
    * We should hand-draw this with `rect`s from scratch.
    */
   res.send(`
-    <svg width="${82 + width}" height="29" viewBox="0 0 ${
-    82 + width
+    <svg width="${48 + width}" height="29" viewBox="0 0 ${
+    48 + width
   } 29" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0H${48 + width}V29H0V0Z" fill="#C0C0C0"/>
     <rect width="1" height="28" fill="#DFDFDF"/>
