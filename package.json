@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "98.css": "^0.1.11",
+    "filesize": "^6.1.0",
+    "gzip-size": "^5.1.1",
+    "node-fetch": "^2.6.0",
+    "now": "^18.0.0",
+    "text-to-svg": "^3.1.5"
+  },
+  "name": "98badges",
+  "version": "0.0.1",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "now dev",
+    "deploy": "now",
+    "deploy:prod": "now --prod"
+  },
+  "author": "Jordan Scales <scalesjordan@gmail.com>",
+  "license": "MIT",
+  "description": ""
+}
