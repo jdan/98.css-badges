@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "98.css": "^0.1.12",
+    "98.css": "*",
     "filesize": "^6.1.0",
     "gzip-size": "^5.1.1",
     "node-fetch": "^2.6.0",
