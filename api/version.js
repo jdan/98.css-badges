@@ -1,8 +1,14 @@
+const fetch = require("node-fetch");
 const path = require("path");
 const TextToSVG = require("text-to-svg");
 
 module.exports = async (req, res) => {
-  const { version } = require("../node_modules/98.css/package.json");
+  const css = await fetch("https://unpkg.com/98.css").then((res) => res.text());
+
+  // extract the version number from the start
+  // the file starts like this:
+  // /*! 98.css v0.1.20 - https://github.com/jdan/98.css
+  const text = css.match(/v\d+\.\d+\.\d+/)[0];
 
   res.setHeader("Content-Type", "image/svg+xml");
   const textToSVG = TextToSVG.loadSync(
@@ -13,8 +19,6 @@ module.exports = async (req, res) => {
     anchor: "top",
     attributes: { fill: "black" },
   };
-
-  const text = `v${version}`;
 
   const metrics = textToSVG.getMetrics(text, options);
   const width = metrics.width - 1;
